@@ -1,0 +1,311 @@
+@import "../layout.scss";
+
+.navbar {
+    $margin: 2rem;
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    background: $primaryColor;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, $primaryColor, $secondaryColor);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $primaryColor, $secondaryColor);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     height: 70px;
+    justify-content: space-between;
+    z-index: 4;
+     & .logo {
+
+        & a {
+            height: 70px;
+            display: flex;
+             align-items: center;
+            text-decoration: none;
+
+            & .logoItem {
+                height: 50%;
+                width: 200px;
+                margin-right: 1.3rem;
+            }
+
+            & .logoName {
+                color: $fontColor;
+                font-size: 20px;
+            }
+
+        }
+
+        margin-left: $margin;
+    }
+
+    & .menu {
+        display: none;
+        margin-right: $margin;
+    }
+
+    & .socialMedia {
+        display: flex;
+        align-items: center;
+
+
+
+        height: 70px;
+
+
+        & .icon {
+            font-size: 20px;
+
+            transition: .1s ease-in;
+            cursor: pointer;
+
+            &:hover {
+
+                // animation:  circle 1s both;
+
+                color: $details;
+
+            }
+        }
+
+
+        & p {
+            margin: 0 5px;
+
+            font-size: 1rem;
+        }
+
+    }
+
+    & .links {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        margin-right: $margin;
+
+        & ul {
+
+
+            & .link {
+
+                margin-right: 5px;
+                text-decoration: none;
+                font-size: .9rem;
+                font-weight: 600;
+                color: $fontColor;
+
+                padding: 5px;
+                box-sizing: border-box;
+                border-radius: 13px;
+                border-bottom: $bordeLink solid transparent;
+                border-left: $bordeLink solid transparent;
+                border-right: $bordeLink/5 solid transparent;
+                border-top: $bordeLink/5 solid transparent;
+
+
+                transition: 0.3s ease 0s;
+
+                &:hover {
+
+                    border-bottom: $bordeLink solid $details;
+                    border-left: $bordeLink solid $details;
+                    border-right: $bordeLink/5 solid $details;
+                    border-top: $bordeLink/5 solid $details;
+                    // border-right: .5px solid #156cbe;
+
+                }
+
+                &.activeLink {
+                    animation: popButton .8s both;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+@media only screen and(max-width:1024px) {
+    .socialMedia {
+
+        // align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 10px;
+
+        & .icon {
+            font-size: 10px;
+        }
+
+        & p {
+
+            transform: rotateZ(90deg);
+        }
+
+
+    }
+
+    .logoName {
+        display: none;
+    }
+}
+
+@keyframes popButton {
+    0% {
+
+        border-bottom: $bordeLink solid $details;
+        border-left: $bordeLink solid $details;
+        border-right: $bordeLink/5 solid $details;
+        border-top: $bordeLink/5 solid $details;
+
+
+
+
+    }
+
+    100% {
+        border-radius: 5px;
+        border-bottom: $bordeLink solid $terciaryColor;
+        border-left: $bordeLink solid $terciaryColor;
+        border-right: $bordeLink/5 solid $terciaryColor;
+        border-top: $bordeLink/5 solid $terciaryColor;
+        background-color: #787dff;
+
+
+    }
+}
+
+
+@media only screen and (max-width:768px) {
+    .navbar {
+        & .links {
+
+            position: absolute;
+            transition: .7s ease-in-out;
+            margin-right: 0;
+            background: #f12711;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right,
+            #f5af197e,
+            #f1271167);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right,
+            rgb(255, 255, 255),
+            #fffffff6);
+            
+            width: 100%;
+            & ul {
+                height: 100vh;
+                width: inherit;
+                justify-content: center;
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+
+                & .link {
+                    align-self: center;
+
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                    color: rgb(0, 0, 0);
+
+                }
+            }
+        }
+
+        .logo {
+
+            width: 100%;
+            order: 1;
+
+            & .logoItem {
+                margin-right: 0;
+            }
+
+            & .logoName {
+                display: unset;
+                margin: auto;
+            }
+        }
+
+        .socialMedia {
+            width: 10%;
+            order: 2;
+        }
+
+        & .menu {
+            display: flex;
+            align-self: center;
+            display: unset;
+            cursor: pointer;
+            z-index: 3;
+            color: white;
+            order: 3;
+
+
+        }
+
+        .active {
+            color: #f12711;
+            transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .movileMenuDisable {
+            -webkit-clip-path: circle(0% at 100% 0%);
+            clip-path: circle(0% at 100% 0%);
+            right: 0;
+        }
+
+        .movileMenu {
+            -webkit-clip-path: circle(142% at 100% 0%);
+            clip-path: circle(142% at 100% 0%);
+            right: 0;
+        }
+    }
+}
+
+@media only screen and (max-width:480px) {
+
+    .navbar {
+
+        & .logo {
+            a {
+
+
+                & .logoName {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media only screen and (max-width:370px) {
+
+    .navbar {
+        & .logo {
+            width: 30%;
+            order: 1;
+
+            a {
+
+                & .logoName {
+                    display: none;
+                }
+            }
+        }
+
+        & socialMedia {
+            order: 2;
+            width: 10%;
+        }
+
+        & .menu {
+            order: 3;
+        }
+    }
+
+}
