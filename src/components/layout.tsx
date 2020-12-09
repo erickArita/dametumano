@@ -6,8 +6,7 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Navbar from "./Navbar/Navbar"
+ import Navbar from "./Navbar/Navbar"
 import Header from "./header/Header"
 import "normalize.css"
 import "./layout.scss"
