@@ -49,7 +49,7 @@ const NavBar = () => {
 
         <nav className={navbar.navbar} >
             <div className={navbar.logo}>
-                <Link to='/' >
+                <Link rel='preload' to='/' >
                     <Img className={navbar.logoItem}
                         fixed={query.logo.sharp.fixed} alt="logo de dame tu mano" />
 
@@ -69,12 +69,12 @@ const NavBar = () => {
             <div className={`${navbar.links} ${showMenu ? navbar.movileMenu : navbar.movileMenuDisable}`} >
                 <Scrollspy items={['header', 'nosotros', 'section-3']} currentClassName={navbar.activeLink} >
 
-                    <Link className={navbar.link} to='/'>INICIO</Link>
-                    <Link className={navbar.link} to='#nosotros'>NOSOTROS</Link>
-                    <Link className={navbar.link} to='#'>TESTIMONIALES</Link>
-                    <Link className={navbar.link} to='#'>PORTAFOLIO</Link>
-                    <Link className={navbar.link} to='/contacto'>CONTACTO</Link>
-                    <Link className={navbar.link} to='/#aa'>DONAR</Link>
+                    <Link  rel='preload' className={navbar.link} to='/'>INICIO</Link>
+                    <Link rel='preload' className={navbar.link} to='#nosotros'>NOSOTROS</Link>
+                    <Link rel='preload' className={navbar.link} to='#'>TESTIMONIALES</Link>
+                    <Link rel='preload' className={navbar.link} to='#'>PORTAFOLIO</Link>
+                    <Link rel='preload' className={navbar.link} to='/contacto'>CONTACTO</Link>
+                    <Link rel='preload' className={navbar.link} to='/#aa'>DONAR</Link>
 
                 </Scrollspy>
 
