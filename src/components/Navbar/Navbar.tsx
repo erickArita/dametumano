@@ -69,12 +69,12 @@ const NavBar = () => {
             <div className={`${navbar.links} ${showMenu ? navbar.movileMenu : navbar.movileMenuDisable}`} >
                 <Scrollspy items={['header', 'nosotros', 'section-3']} currentClassName={navbar.activeLink} >
 
-                    <Link  rel='preload' className={navbar.link} to='/'>INICIO</Link>
-                    <Link rel='preload' className={navbar.link} to='#nosotros'>NOSOTROS</Link>
-                    <Link rel='preload' className={navbar.link} to='#'>TESTIMONIALES</Link>
-                    <Link rel='preload' className={navbar.link} to='#'>PORTAFOLIO</Link>
-                    <Link rel='preload' className={navbar.link} to='/#contacto'>CONTACTO</Link>
-                    <Link rel='preload' className={navbar.link} to='/#aa'>DONAR</Link>
+                    <Link   className={navbar.link} to='/'>INICIO</Link>
+                    <Link  className={navbar.link} to='#nosotros'>NOSOTROS</Link>
+                    <Link  className={navbar.link} to='#'>TESTIMONIALES</Link>
+                    <Link  className={navbar.link} to='#'>PORTAFOLIO</Link>
+                    <Link  className={navbar.link} to='/#contacto'>CONTACTO</Link>
+                    <Link  className={navbar.link} to='/#aa'>DONAR</Link>
 
                 </Scrollspy>
 
