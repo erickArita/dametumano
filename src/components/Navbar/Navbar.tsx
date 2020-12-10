@@ -73,7 +73,7 @@ const NavBar = () => {
                     <Link rel='preload' className={navbar.link} to='#nosotros'>NOSOTROS</Link>
                     <Link rel='preload' className={navbar.link} to='#'>TESTIMONIALES</Link>
                     <Link rel='preload' className={navbar.link} to='#'>PORTAFOLIO</Link>
-                    <Link rel='preload' className={navbar.link} to='/contacto'>CONTACTO</Link>
+                    <Link rel='preload' className={navbar.link} to='/#contacto'>CONTACTO</Link>
                     <Link rel='preload' className={navbar.link} to='/#aa'>DONAR</Link>
 
                 </Scrollspy>

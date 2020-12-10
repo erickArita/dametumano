@@ -6,7 +6,7 @@ import Footer from "../components/footer/Footer"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Club Dame Tu Mano" />
+    <SEO  />
     <Nosotros />
 
     <Footer />
