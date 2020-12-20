@@ -31,7 +31,7 @@ const Header = () => {
             <h1 className={header.title} >Bienvenido a Club Dame tu Mano</h1>
             <p className={header.parrafo} >Somos un grupo de jóvenes dispuestos  a trabajar por una sociedad más justa y fraterna para todos.</p>
           </div>
-          <Link to='/#donar' className={header.button} >Donar</Link>
+          <Link to='/#donar' className={header.button} >Únete</Link>
         </div>
       </div>
     </div>

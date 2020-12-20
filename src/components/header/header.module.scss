@@ -72,7 +72,7 @@
 
         .button {
             display: flex;
-            background-color: #ffffff;
+            background-color:#ffffffc9;
             justify-content: center;
             align-items: center;
             cursor: pointer;
@@ -82,14 +82,14 @@
             border: none;
             width: 15%;
             text-decoration: none;
-            color: rgb(0, 0, 0);
-            
+            color: rgb(6, 3, 58);
+            min-width: 90px;
             box-shadow: -6px 3px 11px 0px;
             transition: background-color .5s;
             font-size: 18px;
             &:hover{
-                background-color: #eb3a3a;
-             
+                 
+                background-color: #6c63f7ec;
             }
         }
     }
@@ -105,10 +105,9 @@
         }
 
         .textos {
-
+            // position: relative;
             justify-content: flex-end;
-
-            .textContainer {
+             .textContainer {
 
                 background-color: #ffffffa8;
                 box-sizing: border-box;
@@ -129,6 +128,12 @@
                     text-align: justify;
                     width: 100%;
                 }
+            }
+            .button{
+                position: absolute;
+                align-self: center;
+                margin: 0;
+                margin-bottom: 30vh;
             }
         }
     }
