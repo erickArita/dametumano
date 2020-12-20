@@ -76,7 +76,7 @@ const Nosotros = () => {
                 {
                     data.map(({year,content}) => 
                         // console.log(year,content)
-                        <LineSection year={year} content={content} />
+                        <LineSection key={year} year={year} content={content} />
                     )
                 }
 
