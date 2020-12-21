@@ -210,10 +210,10 @@
             }
 
             .button {
-                position: fixed;
+                position: absolute;
                 align-self: unset;
-                margin: 0% 0% 44% 0%;
-                bottom: 3%;
+                margin: unset;
+                bottom: 20%;
             }
         }
     }
