@@ -132,8 +132,8 @@
             .button{
                 position: absolute;
                 align-self: center;
-                margin: 0;
-                margin-bottom: 30vh;
+                margin: 0 0 200px 0;
+                
             }
         }
     }
@@ -142,20 +142,20 @@
 @media only screen and (max-width:425px) {
     .images {
 
-        height: inherit;
-        width: inherit;
+        // height: inherit;
+        // width: inherit;
         position: relative;
 
         .img:first-child {
             position: absolute;
-            height: inherit;
+            // height: inherit;
             width: 100%;
             object-fit: cover;
         }
 
         .img:nth-child(2) {
             position: absolute;
-            height: inherit;
+            // height: inherit;
             width: 80%;
             object-fit: cover;
 
@@ -184,11 +184,9 @@
 
 
         .textos {
-
             justify-content: flex-end;
-
+            align-items: center;
             .textContainer {
-
                 background-color: #ffffffa8;
                 box-sizing: border-box;
                 padding: 10px 10px;
@@ -205,6 +203,12 @@
                     width: 100%;
                     font-size: 15px;
                 }
+            }
+            .button{
+                // background-color: red;
+                // position: relative;
+                // align-self:unset;
+                margin-bottom: 44%;
             }
         }
     }
