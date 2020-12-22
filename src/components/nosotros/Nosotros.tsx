@@ -71,15 +71,18 @@ const Nosotros = () => {
                 }} />
 
             <h2 className={nosotros.title} >Nosotros</h2>
-            <div className={nosotros.lineContainer}>
+            <div className={nosotros.nosotrosContent}>
 
-                {
-                    data.map(({year,content}) => 
-                        // console.log(year,content)
-                        <LineSection key={year} year={year} content={content} />
-                    )
-                }
+                <div className={nosotros.lineContainer}>
 
+                    {
+                        data.map(({ year, content }) =>
+                            // console.log(year,content)
+                            <LineSection key={year} year={year} content={content} />
+                        )
+                    }
+
+                </div>
             </div>
         </div>
 

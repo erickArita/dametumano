@@ -261,6 +261,10 @@
             -webkit-clip-path: circle(142% at 100% 0%);
             clip-path: circle(142% at 100% 0%);
             right: 0;
+            &ul{
+
+                padding: 0;
+            }
         }
     }
 }
