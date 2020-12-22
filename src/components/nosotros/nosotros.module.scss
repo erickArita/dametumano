@@ -6,7 +6,7 @@
     background: #121f3d;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     position: relative;
     // margin: 5rem 0;
 
@@ -16,6 +16,7 @@
         height: 100%;
         width: 100%;
         box-sizing: border-box;
+        z-index: 3;
     }
 
     .title {
@@ -34,6 +35,7 @@
         display: flex;
         position: relative;
         justify-content: center;
+        align-items: center;
         height: 90vh;
         box-sizing: border-box;
 
@@ -89,7 +91,7 @@
                     font-weight: 700;
                     margin: -10px;
                     width: 100%;
-                    z-index: 3;   
+                    z-index: 3;
                 }
 
                 .contentLine {
@@ -162,7 +164,7 @@
                         background-color: #24385b;
                     }
 
-                     
+
 
                     .contentLine {
                         margin: auto 0;
@@ -176,6 +178,9 @@
                             font-size: 13px;
                             line-height: normal;
                             margin-left: -27px;
+                            & p{
+                                font-size: 16px;
+                            }
                         }
                     }
 
@@ -196,8 +201,12 @@
     }
 }
 
-@media  screen  and( max-height:400px) {
+@media screen and(max-height:400px) {
     .nosotros {
         height: 182vh;
+
+        .nosotrosContent {
+            height: 100%;
+        }
     }
 }

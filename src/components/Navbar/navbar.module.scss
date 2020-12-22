@@ -12,15 +12,16 @@
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, $primaryColor, $secondaryColor);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-     height: 70px;
+    height: 70px;
     justify-content: space-between;
     z-index: 4;
-     & .logo {
+
+    & .logo {
 
         & a {
             height: 70px;
             display: flex;
-             align-items: center;
+            align-items: center;
             text-decoration: none;
 
             & .logoItem {
@@ -76,6 +77,8 @@
         }
 
     }
+
+
 
     & .links {
         display: flex;
@@ -187,14 +190,15 @@
             background: #f12711;
             /* fallback for old browsers */
             background: -webkit-linear-gradient(to right,
-            #f5af197e,
-            #f1271167);
+                    #f5af197e,
+                    #f1271167);
             /* Chrome 10-25, Safari 5.1-6 */
             background: linear-gradient(to right,
-            rgb(255, 255, 255),
-            #fffffff6);
-            
+                    rgb(255, 255, 255),
+                    #fffffff6);
+
             width: 100%;
+
             & ul {
                 height: 100vh;
                 width: inherit;
@@ -255,13 +259,19 @@
             -webkit-clip-path: circle(0% at 100% 0%);
             clip-path: circle(0% at 100% 0%);
             right: 0;
+
+            & ul {
+
+                padding: 0;
+            }
         }
 
         .movileMenu {
             -webkit-clip-path: circle(142% at 100% 0%);
             clip-path: circle(142% at 100% 0%);
             right: 0;
-            &ul{
+
+            & ul {
 
                 padding: 0;
             }
