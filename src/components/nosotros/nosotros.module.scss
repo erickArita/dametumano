@@ -124,7 +124,7 @@
         .nosotrosContent {
 
             .lineContainer {
-                grid-template-rows: repeat(auto-fit, minmax(206px, 1fr));
+                grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
                 grid-template-columns: 1fr;
 
                 position: relative;
@@ -138,8 +138,7 @@
 
                     border: none;
                     margin: 0;
-                    padding-left: 48px;
-                    // margin-bottom: 45rem;
+                    padding: 0 0 0 48px;
 
                     &:nth-child(2n-1) {
                         flex-direction: column;
@@ -178,7 +177,8 @@
                             font-size: 13px;
                             line-height: normal;
                             margin-left: -27px;
-                            & p{
+
+                            & p {
                                 font-size: 16px;
                             }
                         }
@@ -201,9 +201,30 @@
     }
 }
 
+@media screen and(max-width:370px) {
+    .nosotros {
+
+        height: 120vh;
+
+        .nosotrosContent {
+            height: 100%;
+        }
+    }
+}
+
 @media screen and(max-height:400px) {
     .nosotros {
         height: 182vh;
+
+        .nosotrosContent {
+            height: 100%;
+        }
+    }
+}
+
+@media screen and(max-height:320px) {
+    .nosotros {
+        height: 100vw;
 
         .nosotrosContent {
             height: 100%;

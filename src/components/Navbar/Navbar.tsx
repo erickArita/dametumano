@@ -44,9 +44,6 @@ const NavBar = () => {
     }
   `)
     return (
-
-
-
         <nav className={navbar.navbar} >
             <div className={navbar.logo}>
                 <Link rel='preload' to='/' >
@@ -67,14 +64,14 @@ const NavBar = () => {
                 <FontAwesomeIcon className={navbar.icon} icon={faInstagram} />
             </div>
             <div className={`${navbar.links} ${showMenu ? navbar.movileMenu : navbar.movileMenuDisable}`} >
-                <Scrollspy items={['header', 'nosotros', 'section-3']} currentClassName={navbar.activeLink} >
-
-                    <Link   className={navbar.link} to='/'>INICIO</Link>
-                    <Link  className={navbar.link} to='#nosotros'>NOSOTROS</Link>
-                    <Link  className={navbar.link} to='#'>TESTIMONIALES</Link>
-                    <Link  className={navbar.link} to='#'>PORTAFOLIO</Link>
-                    <Link  className={navbar.link} to='/#contacto'>CONTACTO</Link>
-                    <Link  className={navbar.link} to='/#aa'>DONAR</Link>
+                <Scrollspy  items={['header', 'nosotros', 'section-3']} currentClassName={navbar.activeLink} >
+                    
+                    <Link className={navbar.link} to='/'>INICIO</Link>
+                    <a className={navbar.link} href='/#nosotros'>NOSOTROS</a>
+                    <a className={navbar.link} href='#'>TESTIMONIALES</a>
+                    <a className={navbar.link} href='#'>PORTAFOLIO</a>
+                    <a className={navbar.link} href='/#contacto'>CONTACTO</a>
+                    <a className={navbar.link} href='/#aa'>DONAR</a>
 
                 </Scrollspy>
 
