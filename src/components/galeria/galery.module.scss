@@ -1,0 +1,16 @@
+.galeria {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+
+    & .title {
+        text-align: center;
+    }
+
+    & .carousel {
+        width: 100px;
+        height: 100px;
+    }
+}

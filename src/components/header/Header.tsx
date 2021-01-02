@@ -5,15 +5,15 @@ import Image from 'gatsby-image'
 const Header = () => {
    
   const data = useStaticQuery(graphql`
-  query{
-    image:file(relativePath:{eq:"header.jpg"}){
-      sharp:childImageSharp { 
-        fluid(maxWidth:1200){
-          ...GatsbyImageSharpFluid
+    query{
+      image:file(relativePath:{eq:"header.jpg"}){
+        sharp:childImageSharp { 
+          fluid(maxWidth:1200){
+            ...GatsbyImageSharpFluid
+          }
         }
       }
     }
-  }
   `)
   return (
     <div id='header' className={header.header}>
