@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import navbar from './navbar.module.scss'
 import { graphql, Link, useStaticQuery } from 'gatsby'
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import Scrollspy from 'react-scrollspy'
 import Img from 'gatsby-image'
-
+import { FaBars, FaFacebook, FaInstagram } from 'react-icons/fa';
 const NavBar = () => {
     const [showMenu, setShowMenu] = useState(false)
     const handleMenu = () => {
@@ -56,22 +53,22 @@ const NavBar = () => {
             </div>
 
             <div onClick={() => handleMenu()} className={`${navbar.menu} ${showMenu && navbar.active}`} >
-                <FontAwesomeIcon icon={faBars} />
+                <FaBars />
             </div>
             <div className={navbar.socialMedia}   >
-                <FontAwesomeIcon className={navbar.icon} icon={faFacebook} />
+                <FaFacebook className={navbar.icon} />
                 <p>|</p>
-                <FontAwesomeIcon className={navbar.icon} icon={faInstagram} />
+                <FaInstagram className={navbar.icon} />
             </div>
             <div className={`${navbar.links} ${showMenu ? navbar.movileMenu : navbar.movileMenuDisable}`} >
-                <Scrollspy  items={['header', 'nosotros', 'section-3']} currentClassName={navbar.activeLink} >
-                    
+                <Scrollspy items={['header', 'nosotros', 'section-3']} currentClassName={navbar.activeLink} >
+
                     <Link className={navbar.link} to='/'>INICIO</Link>
-                    <a className={navbar.link} href='/#nosotros'>NOSOTROS</a>
-                    <a className={navbar.link} href='#'>GALERIA</a>
-                    <a className={navbar.link} href='#'>TESTIMONIALES</a>
-                    <a className={navbar.link} href='/#contacto'>CONTACTO</a>
-                    <a className={navbar.link} href='/#aa'>DONAR</a>
+                    <Link className={navbar.link} to='/#nosotros'>NOSOTROS</Link>
+                    <Link className={navbar.link} to='#'>GALERIA</Link>
+                    <Link className={navbar.link} to='#'>TESTIMONIALES</Link>
+                    <Link className={navbar.link} to='/#contacto'>CONTACTO</Link>
+                    <Link className={navbar.link} to='/#aa'>DONAR</Link>
 
                 </Scrollspy>
 
