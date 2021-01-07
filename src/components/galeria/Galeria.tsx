@@ -9,7 +9,7 @@ import '@brainhubeu/react-carousel/lib/style.css';
 const Galeria = () => {
     const { allImagesWithoutWEBPExtension } = useStaticQuery(graphql`
     query {
-        allImagesWithoutWEBPExtension: allFile(
+        allImagesWithoutWEBPExtension: allFile( 
         filter: {
             sourceInstanceName: { eq: "images" }
             extension: { regex: "/webp/" }
@@ -33,7 +33,8 @@ const Galeria = () => {
 
     const images = []
     edges.forEach((e, i) => {
-        images.push((<img key={i} style={{ borderRadius: "10px", minWidth: "200px", maxWidth: "700px" }} src={e.node.childImageSharp.fluid.src} />))
+        images.push((<img key={i} style={{ borderRadius: "10px", minWidth: "200px", maxWidth: "700px" }}
+            src={e.node.childImageSharp.fluid.src} />))
     });
     return (
         <section className={galer.galeria}>
@@ -54,9 +55,10 @@ const Galeria = () => {
                         }
                     }
                 ]}
+
                 animationSpeed={1000}
-           slides={images} /> 
-          
+                slides={images} />
+
         </section>
     )
 }
