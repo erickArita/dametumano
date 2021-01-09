@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC, useEffect, useState } from 'react';
+import React, { ChangeEvent, FC, UIEventHandler, useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 
@@ -30,36 +30,43 @@ const Galeria: FC = () => {
     const { edges } = allImagesWithoutWEBPExtension;
     const images = []
     edges.forEach((e) => {
-            images.push(e.node.childImageSharp.fluid.src)
+        images.push(e.node.childImageSharp.fluid.src)
     });
 
     const [breakPoint, setBreakPoint] = useState(false)
 
-
     useEffect(() => {
         const updateWidth = (e) => {
-            if (e.target.innerWidth < 950) {
+            if (e.target.innerWidth > 750) {
                 setBreakPoint(true);
+            } else {
+                setBreakPoint(false)
             }
         }
+        if (window.innerWidth > 750) {
+            setBreakPoint(true);
+        } else {
+            setBreakPoint(false)
+        };
 
-        window.addEventListener('load', updateWidth)
+        window.addEventListener('resize', updateWidth)
 
         return () => {
-            window.removeEventListener('load', updateWidth)
+            window.removeEventListener('resize', updateWidth)
         }
 
     }, [])
+
     return (
         <section id='galeria' className={galer.galeria}>
             <h2 className={galer.title}>Galeria</h2>
             <Carousel
-                arrows={breakPoint ? false : true}
+
+                arrows={breakPoint == true ? true : false}
                 keepDirectionWhenDragging
                 autoPlay={5000}
                 animationSpeed={1000}
-                slidesPerPage={breakPoint ? 1 : 2}
-
+                slidesPerPage={breakPoint === true ? 2 : 1}
             >
                 {
                     images.map((e, i) => (<img key={i} style={{ borderRadius: "10px", minWidth: "200px", maxWidth: "700px" }}
