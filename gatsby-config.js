@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Club Dame Tu Mano`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `@Erick-Arita`,
   },
   
   pathPrefix: "/dametumano/",
