@@ -63,7 +63,7 @@ const Galeria: FC = () => {
             >
                 {
                     images.map((e, i) => (<img key={i} style={{ borderRadius: "10px", minWidth: "200px", maxWidth: "700px" }}
-                        src={`dametumano/${e}`} />))
+                        src={e} />))
                 }
             </Carousel>
 
