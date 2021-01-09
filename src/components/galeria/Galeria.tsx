@@ -43,10 +43,10 @@ const Galeria: FC = () => {
             }
         }
 
-        window.addEventListener('resize', updateWidth)
+        window.addEventListener('load', updateWidth)
 
         return () => {
-            window.removeEventListener('resize', updateWidth)
+            window.removeEventListener('load', updateWidth)
         }
 
     }, [])
