@@ -1,12 +1,12 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import React, { ChangeEvent, FC, useEffect, useState } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 
-import Carousel, { autoplayPlugin, slidesToShowPlugin } from '@brainhubeu/react-carousel';
-import galer from './galery.module.scss'
+import Carousel from '@brainhubeu/react-carousel';
+import galer from './galery.module.scss';
 import '@brainhubeu/react-carousel/lib/style.css';
 
-const Galeria = () => {
+const Galeria: FC = () => {
     const { allImagesWithoutWEBPExtension } = useStaticQuery(graphql`
     query {
         allImagesWithoutWEBPExtension: allFile( 
@@ -27,37 +27,45 @@ const Galeria = () => {
           }
         }
 }`)
-    const { edges } = allImagesWithoutWEBPExtension
-
-
-
+    const { edges } = allImagesWithoutWEBPExtension;
     const images = []
-    edges.forEach((e, i) => {
-        images.push((<img key={i} style={{ borderRadius: "10px", minWidth: "200px", maxWidth: "700px" }}
-            src={e.node.childImageSharp.fluid.src} />))
+    edges.forEach((e) => {
+            images.push(e.node.childImageSharp.fluid.src)
     });
+
+    const [breakPoint, setBreakPoint] = useState(false)
+
+
+    useEffect(() => {
+        const updateWidth = (e) => {
+            if (e.target.innerWidth < 950) {
+                setBreakPoint(true);
+            }
+        }
+
+        window.addEventListener('resize', updateWidth)
+
+        return () => {
+            window.removeEventListener('resize', updateWidth)
+        }
+
+    }, [])
     return (
-        <section className={galer.galeria}>
+        <section id='galeria' className={galer.galeria}>
             <h2 className={galer.title}>Galeria</h2>
             <Carousel
-                plugins={[
-                    'autoplay',
-                    {
-                        resolve: autoplayPlugin,
-                        options: {
-                            interval: 2000,
-                        }
-                    },
-                    {
-                        resolve: slidesToShowPlugin,
-                        options: {
-                            numberOfSlides: 2
-                        }
-                    }
-                ]}
-
+                arrows={breakPoint ? false : true}
+                keepDirectionWhenDragging
+                autoPlay={5000}
                 animationSpeed={1000}
-                slides={images} />
+                slidesPerPage={breakPoint ? 1 : 2}
+
+            >
+                {
+                    images.map((e, i) => (<img key={i} style={{ borderRadius: "10px", minWidth: "200px", maxWidth: "700px" }}
+                        src={e} />))
+                }
+            </Carousel>
 
         </section>
     )

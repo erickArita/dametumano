@@ -64,8 +64,8 @@ const NavBar = () => {
                 <Scrollspy items={['header', 'nosotros', 'section-3']} currentClassName={navbar.activeLink} >
 
                     <Link className={navbar.link} to='/'>INICIO</Link>
-                    <Link className={navbar.link} to='/#nosotros'>NOSOTROS</Link>
-                    <Link className={navbar.link} to='#'>GALERIA</Link>
+                    <Link className={navbar.link} to='#nosotros'>NOSOTROS</Link>
+                    <Link className={navbar.link} to='#galeria'>GALERIA</Link>
                     <Link className={navbar.link} to='#'>TESTIMONIALES</Link>
                     <Link className={navbar.link} to='/#contacto'>CONTACTO</Link>
                     <Link className={navbar.link} to='/#aa'>DONAR</Link>
