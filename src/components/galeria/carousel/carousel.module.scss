@@ -1,170 +1,187 @@
 // html,
 // body {
-//     height: 100%;
-//     width: 100%;
-//     margin: 0;
-//     padding: 0;
-//     font-size: 3vmin;
 // }
 
 // html {
 //     background: #151515;
 //     color: #fff;
 // }
-
-// body {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
 .container {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 3vmin;
-    & > *,
-    & > *::before,
-    & > *::after {
-        box-sizing: border-box;
-        position: relative;
-    }
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 3vmin;
+	> *,
+	> *::before,
+	> *::after {
+		box-sizing: border-box;
+		position: relative;
+	}
 }
+// body {
+// }
+
 .slides {
-    display: grid;
-    > .slide {
-        grid-area: 1 / -1;
-    }
+	display: grid;
+	> .slide {
+		grid-area: 1 / -1;
+	}
 
-    > button {
-        appearance: none;
-        background: transparent;
-        border: none;
-        color: white;
-        position: absolute;
-        font-size: 5rem;
-        width: 5rem;
-        height: 5rem;
-        top: 30%;
-        transition: opacity 0.3s;
-        opacity: 0.7;
-        z-index: 5;
+	> button {
+		appearance: none;
+		background: transparent;
+		border: none;
+		color: rgb(0, 0, 0);
+		position: absolute;
+		font-size: 5rem;
+		width: 5rem;
+		height: 5rem;
+		top: 30%;
+		transition: opacity 0.3s;
+		opacity: 0.7;
+		z-index: 5;
 
-        &:hover {
-            opacity: 1;
-        }
+		&:hover {
+			opacity: 1;
+		}
 
-        &:focus {
-            outline: none;
-        }
+		&:focus {
+			outline: none;
+		}
 
-        &:first-child {
-            left: -50%;
-        }
-        &:last-child {
-            right: -50%;
-        }
-    }
+		&:first-child {
+			left: -50%;
+		}
+		&:last-child {
+			right: -50%;
+		}
+		@media (max-width: 755px) {
+			color: black;
+
+			&:first-child {
+				left: -20%;
+			}
+			&:last-child {
+				right: -20%;
+			}
+		}
+	}
 }
 
 .slide {
-    //transform-style: preserve-3d;
-    // border: solid 1px red;
+	// transform-style: preserve-3d;
+	// border: solid 1px red;
 
-    // &[data-active] {
-    //   .slideContent > * {
-    //     transform: none;
-    //     opacity: 1;
-    //   }
-    // }
+	// &[data-active] {
+	//   .slideContent > * {
+	//     transform: none;
+	//     opacity: 1;
+	//   }
+	// }
 }
 
 .slideContent {
-    width: 30vw;
-    height: 40vw;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    transition: transform 0.5s ease-in-out;
-    opacity: 0.7;
+	width: 30vw;
+	height: 40vw;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	transition: transform 0.5s ease-in-out;
+	opacity: 0.7;
+	border-radius: 10px;
+	min-width: 300px;
+	max-width: 700px;
+	display: grid;
+	align-content: center;
 
-    display: grid;
-    align-content: center;
-
-    transform-style: preserve-3d;
-    transform: perspective(1000px) translateX(calc(100% * var(--offset))) rotateY(calc(-45deg * var(--dir)));
+	transform-style: preserve-3d;
+	transform: perspective(1000px) translateX(calc(100% * var(--offset))) rotateY(calc(-45deg * var(--dir)));
 }
-
+@media only screen and(max-width:750px) {
+	.slideContent {
+		width: 70vw;
+		height: 80vw;
+	}
+}
+@media only screen and(max-width:550px) {
+	.container {
+		height: max-content;
+	}
+	.slideContent {
+		width: 80vw;
+		height: 90vw;
+	}
+}
 .slideContentInner {
-    transform-style: preserve-3d;
-    transform: translateZ(2rem);
-    transition: opacity 0.3s linear;
-    text-shadow: 0 0.1rem 1rem #000;
-    opacity: 0;
+	transform-style: preserve-3d;
+	transform: translateZ(2rem);
+	transition: opacity 0.3s linear;
+	text-shadow: 0 0.1rem 1rem #000;
+	opacity: 0;
 
-    .slideSubtitle,
-    .slideTitle {
-        font-size: 2rem;
-        font-weight: normal;
-        letter-spacing: 0.2ch;
-        text-transform: uppercase;
-        margin: 0;
-    }
+	.slideSubtitle,
+	.slideTitle {
+		font-size: 2rem;
+		font-weight: normal;
+		letter-spacing: 0.2ch;
+		text-transform: uppercase;
+		margin: 0;
+	}
 
-    .slideSubtitle::before {
-        content: "— ";
-    }
+	.slideSubtitle::before {
+		content: "— ";
+	}
 
-    .slideDescription {
-        margin: 0;
-        font-size: 0.8rem;
-        letter-spacing: 0.2ch;
-    }
+	.slideDescription {
+		margin: 0;
+		font-size: 0.8rem;
+		letter-spacing: 0.2ch;
+	}
 }
 
-.slideBackground {
-    position: fixed;
-    top: 0;
-    left: -10%;
-    right: -10%;
-    bottom: 0;
-    background-size: cover;
-    background-position: center center;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s linear, transform 0.3s ease-in-out;
-    pointer-events: none;
+// .slideBackground {
+// 	position: fixed;
+// 	top: 0;
+// 	left: -10%;
+// 	right: -10%;
+// 	bottom: 0;
+// 	background-size: cover;
+// 	background-position: center center;
+// 	z-index: -1;
+// 	opacity: 0;
+// 	transition: opacity 0.3s linear, transform 0.3s ease-in-out;
+// 	pointer-events: none;
 
-    transform: translateX(calc(10% * var(--dir)));
-}
+// 	transform: translateX(calc(10% * var(--dir)));
+// }
 
 .slide[data-active] {
-    z-index: 2;
-    pointer-events: auto;
+	z-index: 2;
+	pointer-events: auto;
+	.slideBackground {
+		opacity: 0.2;
+		transform: none;
+	}
+	
+	.slideContentInner {
+		opacity: 1;
+	}
+	
+	.slideContent {
+		--x: calc(var(--px) - 0.5);
+		--y: calc(var(--py) - 0.5);
+		opacity: 1;
 
-    .slideBackground {
-        opacity: 0.2;
-        transform: none;
-    }
+		transform: perspective(1000px);
 
-    .slideContentInner {
-        opacity: 1;
-    }
-
-    .slideContent {
-        --x: calc(var(--px) - 0.5);
-        --y: calc(var(--py) - 0.5);
-        opacity: 1;
-
-        transform: perspective(1000px);
-
-        &:hover {
-            transition: none;
-            transform: perspective(1000px) rotateY(calc(var(--x) * 45deg)) rotateX(calc(var(--y) * -45deg));
-        }
-    }
+		&:hover {
+			transition: none;
+			transform: perspective(1000px) rotateY(calc(var(--x) * 45deg)) rotateX(calc(var(--y) * -45deg));
+		}
+	}
 }

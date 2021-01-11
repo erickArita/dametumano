@@ -27,39 +27,15 @@ const Galeria: FC = () => {
     const { edges } = allImagesWithoutWEBPExtension;
     const images = []
     edges.forEach((e) => {
-        images.push(e.node.childImageSharp.fluid.src)
+        images.push({image:e.node.childImageSharp.fluid.src})
     });
 
-    const [breakPoint, setBreakPoint] = useState(false)
-
-    useEffect(() => {
-        const updateWidth = (e) => {
-            if (e.target.innerWidth > 750) {
-                setBreakPoint(true);
-            } else {
-                setBreakPoint(false)
-            }
-        }
-
-        if (window.innerWidth > 750) {
-            setBreakPoint(true);
-        } else {
-            setBreakPoint(false)
-        };
-
-        window.addEventListener('resize', updateWidth)
-
-        return () => {
-            window.removeEventListener('resize', updateWidth)
-        }
-
-    }, [])
-
+   
     return (
         <section id='galeria' className={galer.galeria}>
             <h2 className={galer.title}>Galeria</h2>
 
-            <Carouse />
+            <Carouse  slides={images}/>
         </section>
     )
 }
