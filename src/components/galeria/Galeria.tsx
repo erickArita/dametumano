@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
-import Carouse from './Carousel/Carousel';
+import Carouse from './carousel/Carousel';
 import galer from './galery.module.scss'
 const Galeria: FC = () => {
     const { allImagesWithoutWEBPExtension } = useStaticQuery(graphql`
