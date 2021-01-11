@@ -1,10 +1,8 @@
 import React, { FC, useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
-import Slider from "react-slick";
-import moduleName from 'react-slick'
+import Carouse from './Carousel/Carousel';
 import galer from './galery.module.scss'
-import Carouse from './Carousel';
 const Galeria: FC = () => {
     const { allImagesWithoutWEBPExtension } = useStaticQuery(graphql`
     query {
@@ -56,12 +54,12 @@ const Galeria: FC = () => {
         }
 
     }, [])
-   
+
     return (
         <section id='galeria' className={galer.galeria}>
             <h2 className={galer.title}>Galeria</h2>
-             
-        <Carouse/>
+
+            <Carouse />
         </section>
     )
 }

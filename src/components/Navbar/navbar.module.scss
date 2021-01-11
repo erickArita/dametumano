@@ -243,7 +243,6 @@
             display: flex;
             align-self: center;
             display: unset;
-            cursor: pointer;
             z-index: 3;
             color: white;
             order: 3;
@@ -254,7 +253,6 @@
         .active {
             color: #f12711;
             transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-            cursor: pointer;
         }
 
         .movileMenuDisable {

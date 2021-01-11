@@ -1,5 +1,5 @@
 import React from 'react'
-import './Carousel.scss'
+import 'carousel.module.scss'
 const slides = [
     {
         title: "Machu Picchu",
