@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
-$primaryColor:#787fff;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+$primaryColor: #787fff;
 $secondaryColor: #737afd;
-$terciaryColor:#044389;
-$cuartoColor:#7378d3;
-$primaryColorVariant:#2320e08e;
-$cuartoColorVariant:#ffffff;
-$details:rgb(228, 228, 228);
+$terciaryColor: #044389;
+$cuartoColor: #7378d3;
+$primaryColorVariant: #2320e08e;
+$cuartoColorVariant: #ffffff;
+$details: rgb(228, 228, 228);
 $bordeLink: 5px;
-$fontColor:#fff;
+$fontColor: #fff;
 
-$widthNavbar:120px;
-:root{
+$widthNavbar: 120px;
+:root {
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-body{
-    font-family: 'Open Sans', sans-serif;
-
+body {
+    font-family: "Open Sans", sans-serif;
 }

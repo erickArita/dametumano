@@ -43,6 +43,7 @@
     & .menu {
         display: none;
         margin-right: $margin;
+        z-index: 50;
     }
 
     & .socialMedia {
@@ -96,7 +97,7 @@
                 font-size: .9rem;
                 font-weight: 600;
                 color: $fontColor;
-
+                cursor: pointer;
                 padding: 5px;
                 box-sizing: border-box;
                 border-radius: 13px;
@@ -246,13 +247,14 @@
             z-index: 3;
             color: white;
             order: 3;
-
-
+            
+            
         }
-
+        
         .active {
             color: #f12711;
             transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            cursor: pointer;
         }
 
         .movileMenuDisable {

@@ -1,11 +1,10 @@
-import React, { ChangeEvent, FC, UIEventHandler, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
-
-import Carousel from '@brainhubeu/react-carousel';
-import galer from './galery.module.scss';
-import '@brainhubeu/react-carousel/lib/style.css';
-
+import Slider from "react-slick";
+import moduleName from 'react-slick'
+import galer from './galery.module.scss'
+import Carouse from './Carousel';
 const Galeria: FC = () => {
     const { allImagesWithoutWEBPExtension } = useStaticQuery(graphql`
     query {
@@ -43,6 +42,7 @@ const Galeria: FC = () => {
                 setBreakPoint(false)
             }
         }
+
         if (window.innerWidth > 750) {
             setBreakPoint(true);
         } else {
@@ -56,26 +56,18 @@ const Galeria: FC = () => {
         }
 
     }, [])
-
+   
     return (
         <section id='galeria' className={galer.galeria}>
             <h2 className={galer.title}>Galeria</h2>
-            <Carousel
-
-                arrows={breakPoint == true ? true : false}
-                keepDirectionWhenDragging
-                autoPlay={5000}
-                animationSpeed={1000}
-                slidesPerPage={breakPoint === true ? 2 : 1}
-            >
-                {
-                    images.map((e, i) => (<img key={i} style={{ borderRadius: "10px", minWidth: "200px", maxWidth: "700px" }}
-                        src={e} />))
-                }
-            </Carousel>
-
+             
+        <Carouse/>
         </section>
     )
 }
-
+// {
+//     images.map((e, i) => 
+//     (<div key={i} > <img style={{ borderRadius: "10px", minWidth: "200px", maxWidth: "700px" }}
+//         src={e} /></div>))
+// }
 export default Galeria

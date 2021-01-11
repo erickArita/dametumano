@@ -1,11 +1,27 @@
 import React, { useEffect, useState } from 'react'
 
-import navbar from './navbar.module.scss'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import Scrollspy from 'react-scrollspy'
 import Img from 'gatsby-image'
 import { FaBars, FaFacebook, FaInstagram } from 'react-icons/fa';
+import navbar from './navbar.module.scss'
 const NavBar = () => {
+    const query = useStaticQuery(graphql`
+    query {
+      logo:file(relativePath: { eq: "logo.png" }) {
+       sharp: childImageSharp {
+          fixed (width: 70, height: 70){
+            ...GatsbyImageSharpFixed
+          }
+        }
+    }
+        site {
+            siteMetadata {
+                title
+            }
+        }
+    }
+  `)
     const [showMenu, setShowMenu] = useState(false)
     const handleMenu = () => {
         setShowMenu(!showMenu)
@@ -24,22 +40,7 @@ const NavBar = () => {
 
     }, [])
 
-    const query = useStaticQuery(graphql`
-    query {
-      logo:file(relativePath: { eq: "logo.png" }) {
-       sharp: childImageSharp {
-          fixed (width: 70, height: 70){
-            ...GatsbyImageSharpFixed
-          }
-        }
-    }
-        site {
-            siteMetadata {
-                title
-            }
-        }
-    }
-  `)
+
     return (
         <nav className={navbar.navbar} >
             <div className={navbar.logo}>
@@ -52,7 +53,7 @@ const NavBar = () => {
 
             </div>
 
-            <div onClick={() => handleMenu()} className={`${navbar.menu} ${showMenu && navbar.active}`} >
+            <div onClick={handleMenu} className={`${navbar.menu} ${showMenu && navbar.active}`} >
                 <FaBars />
             </div>
             <div className={navbar.socialMedia}   >
@@ -61,9 +62,9 @@ const NavBar = () => {
                 <FaInstagram className={navbar.icon} />
             </div>
             <div className={`${navbar.links} ${showMenu ? navbar.movileMenu : navbar.movileMenuDisable}`} >
-                <Scrollspy items={['header', 'nosotros', 'section-3']} currentClassName={navbar.activeLink} >
+                <Scrollspy items={['header', 'nosotros', 'galeria']} currentClassName={navbar.activeLink} >
 
-                    <Link className={navbar.link} to='/'>INICIO</Link>
+                    <Link className={navbar.link} to='/#header'>INICIO</Link>
                     <Link className={navbar.link} to='#nosotros'>NOSOTROS</Link>
                     <Link className={navbar.link} to='#galeria'>GALERIA</Link>
                     <Link className={navbar.link} to='#'>TESTIMONIALES</Link>
