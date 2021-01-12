@@ -5,7 +5,7 @@ module.exports = {
     author: `@Erick-Arita`,
   },
   
-  pathPrefix: "/dametumano/",
+  pathPrefix: "/",
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
