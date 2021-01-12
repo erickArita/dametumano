@@ -8,7 +8,6 @@ module.exports = {
   pathPrefix: "/dametumano/",
   plugins: [
     `gatsby-plugin-sass`,
-    `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -22,8 +21,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Club-dame-tu-mano`,
+        short_name: `ONG`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

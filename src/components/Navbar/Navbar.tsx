@@ -57,9 +57,15 @@ const NavBar = () => {
                 <FaBars />
             </div>
             <div className={navbar.socialMedia}   >
-                <FaFacebook className={navbar.icon} />
+                <a href="https://www.facebook.com/dametumanohn/" style={{ color: "black" }} target="__black" >
+
+                    <FaFacebook className={navbar.icon} />
+                </a>
                 <p>|</p>
-                <FaInstagram className={navbar.icon} />
+                <a href="https://www.instagram.com/dametumanohn/" style={{ color: "black" }} target="__black" >
+
+                    <FaInstagram className={navbar.icon} />
+                </a>
             </div>
             <div className={`${navbar.links} ${showMenu ? navbar.movileMenu : navbar.movileMenuDisable}`} >
                 <Scrollspy items={['header', 'nosotros', 'galeria']} currentClassName={navbar.activeLink} >
