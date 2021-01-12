@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"i6+/":function(a,n,e){"use strict";e.r(n);var t=e("q1tI"),i=e.n(t),l=e("H8eV"),c=e("AeFk");n.default=function(){return Object(c.a)(i.a.Fragment,null,Object(c.a)(l.default,{title:"404: No disponible"}),Object(c.a)("h1",null,"404: La pagina no existe"),Object(c.a)("p",null,"Intenta recargar la pagina"))}}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-cebdb5f39ab1c23291df.js.map
