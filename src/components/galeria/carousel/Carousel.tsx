@@ -1,4 +1,5 @@
 import React, { FC, useRef, useEffect, useReducer } from 'react'
+
 import carou from './carousel.module.scss'
  
 const useTilt = (active) => {

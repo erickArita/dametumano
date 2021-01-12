@@ -1,7 +1,8 @@
 import React from 'react'
-import LineSection from './lineSection'
+import loadable from '@loadable/component';
+const LineSection = loadable(() => import('./lineSection'));
 import nosotros from './nosotros.module.scss'
-import Particles from 'react-particles-js'
+const Particles = loadable(() => import('react-particles-js'));
 const Nosotros = () => {
 
     const data = [

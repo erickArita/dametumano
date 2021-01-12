@@ -8,7 +8,7 @@ const Header = () => {
     query{
       image:file(relativePath:{eq:"header.jpg"}){
         sharp:childImageSharp { 
-          fluid(maxWidth:750){
+          fluid(maxWidth:1200){
             ...GatsbyImageSharpFluid
           }
         }
