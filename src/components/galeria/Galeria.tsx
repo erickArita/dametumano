@@ -39,9 +39,4 @@ const Galeria: FC = () => {
         </section>
     )
 }
-// {
-//     images.map((e, i) => 
-//     (<div key={i} > <img style={{ borderRadius: "10px", minWidth: "200px", maxWidth: "700px" }}
-//         src={e} /></div>))
-// }
 export default Galeria

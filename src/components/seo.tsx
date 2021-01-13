@@ -30,13 +30,13 @@ function SEO({ description, lang, meta, title }) {
 
   return (
     <Helmet
-        
+
       htmlAttributes={{
         lang,
       }}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-      
+      link={[{ rel: 'preload' }]}
       meta={[
         {
           name: `description`,
@@ -71,7 +71,7 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-      
+
     />
   )
 }

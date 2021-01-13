@@ -16,7 +16,7 @@ const Header = () => {
       }
       mobileImage:file(relativePath:{eq:"header.jpg"}){
         childImageSharp:childImageSharp { 
-          fluid(maxWidth:750,quality: 100){
+          fluid(maxWidth:550,quality: 70){
             ...GatsbyImageSharpFluid_withWebp
           }
         }
