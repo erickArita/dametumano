@@ -3,7 +3,6 @@
     "presets": [
         
         [
-            "",
             "babel-preset-gatsby",
             {
                 "targets": {
