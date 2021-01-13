@@ -30,10 +30,11 @@ function SEO({ description, lang, meta, title }) {
 
   return (
     <Helmet
-
+    
       htmlAttributes={{
         lang,
       }}
+      script={[{type:'module'}]}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       link={[{ rel: 'preload' }]}
