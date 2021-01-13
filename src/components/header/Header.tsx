@@ -9,14 +9,14 @@ const Header = () => {
 		desktopImage:file(relativePath:{eq:"header.jpg"}){
         childImageSharp:childImageSharp { 
           fluid(maxWidth:1200,quality: 100){
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       mobileImage:file(relativePath:{eq:"header.jpg"}){
         childImageSharp:childImageSharp { 
           fluid(maxWidth:750,quality: 100){
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
