@@ -38,7 +38,6 @@ function SEO({ description, lang, meta, title }) {
       script={[{type:'module'}]}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-      link={[{ rel: 'preload' }]}
       meta={[
         {
           name: `description`,
