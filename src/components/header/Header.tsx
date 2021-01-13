@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
+
 import header from './header.module.scss'
 import Image from 'gatsby-image'
 const Header = () => {

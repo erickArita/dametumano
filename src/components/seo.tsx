@@ -30,11 +30,13 @@ function SEO({ description, lang, meta, title }) {
 
   return (
     <Helmet
+        
       htmlAttributes={{
         lang,
       }}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      
       meta={[
         {
           name: `description`,
@@ -69,6 +71,7 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
+      
     />
   )
 }

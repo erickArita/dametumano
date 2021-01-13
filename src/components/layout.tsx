@@ -1,13 +1,8 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
 
 import React from "react"
- import Navbar from "./Navbar/Navbar"
-import Header from "./header/Header"
+import loadable from '@loadable/component';
+const Navbar = loadable(() => import("./Navbar/Navbar"))
+const Header = loadable(() => import("./header/Header"))
 import "normalize.css"
 import "./layout.module.scss"
 
