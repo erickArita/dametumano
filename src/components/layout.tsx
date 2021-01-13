@@ -1,8 +1,7 @@
 
 import React from "react"
-import loadable from '@loadable/component';
-const Navbar = loadable(() => import("./Navbar/Navbar"))
-const Header = loadable(() => import("./header/Header"))
+import Navbar from "./Navbar/Navbar"
+import Header from "./header/Header"
 import "normalize.css"
 import "./layout.module.scss"
 
