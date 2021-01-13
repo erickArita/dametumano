@@ -16,7 +16,7 @@ const Galeria: FC = () => {
             node {
                 id
               childImageSharp {
-                fluid(maxWidth:1080,quality:100){
+                fluid(maxWidth:750,quality:80){
                     ...GatsbyImageSharpFluid
                 }
               }
