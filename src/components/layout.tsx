@@ -1,4 +1,3 @@
-
 import React from "react"
 import Navbar from "./Navbar/Navbar"
 import Header from "./header/Header"
@@ -8,7 +7,7 @@ import "./layout.module.scss"
 const Layout = ({ children }) => {
   return (
     <>
-      <header >
+      <header>
         <Navbar />
         <Header />
       </header>
