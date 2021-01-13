@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import Carouse from './carousel/Carousel';
@@ -16,7 +16,7 @@ const Galeria: FC = () => {
             node {
                 id
               childImageSharp {
-                fluid(maxWidth:680,quality:100){
+                fluid(maxWidth:1080,quality:100){
                     ...GatsbyImageSharpFluid
                 }
               }
@@ -27,15 +27,15 @@ const Galeria: FC = () => {
     const { edges } = allImagesWithoutWEBPExtension;
     const images = []
     edges.forEach((e) => {
-        images.push({image:e.node.childImageSharp.fluid.src})
+        images.push({ image: e.node.childImageSharp.fluid.src })
     });
 
-   
+
     return (
         <section id='galeria' className={galer.galeria}>
             <h2 className={galer.title}>Galeria</h2>
 
-            <Carouse  slides={images}/>
+            <Carouse slides={images} />
         </section>
     )
 }
