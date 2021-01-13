@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"i6+/":function(e,a,n){"use strict";n.r(a);var t=n("q1tI"),l=n.n(t),r=n("H8eV");a.default=function(){return l.a.createElement(l.a.Fragment,null,l.a.createElement(r.default,{title:"404: No disponible"}),l.a.createElement("h1",null,"404: La pagina no existe"),l.a.createElement("p",null,"Intenta recargar la pagina"))}}}]);
-//# sourceMappingURL=component---src-pages-404-tsx-7f48df62c0f2377e9eaf.js.map
