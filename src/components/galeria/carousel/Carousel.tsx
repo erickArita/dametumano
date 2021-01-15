@@ -70,9 +70,9 @@ const Slide = ({ slide, offset }) => {
         }}
       >
         <div className={carou.slideContentInner}>
-          <h2 className={carou.slideTitle}>{slide?.title}</h2>
-          <h3 className={carou.slideSubtitle}>{slide?.subtitle}</h3>
-          <p className={carou.slideDescription}>{slide?.description}</p>
+          <h2 className={carou.slideTitle}>PLan Grande</h2>
+          <h3 className={carou.slideSubtitle}>Visita A la escuela</h3>
+          <p className={carou.slideDescription}>Ayuda  a los ninos con utiles</p>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from "react"
 import loadable from "@loadable/component"
+import Testimoniales from "../components/Testimoniales/Testimoniales"
 const Layout = loadable(() => import("../components/layout"))
 const SEO = loadable(() => import("../components/seo"))
 const Nosotros = loadable(() => import("../components/nosotros/Nosotros"))
@@ -15,6 +16,7 @@ const IndexPage = () => (
     />
     <Nosotros />
     <Galeria />
+    <Testimoniales/>
     <Footer />
   </Layout>
 )

@@ -1,0 +1,49 @@
+article {
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    & .header {
+        display: flex;
+        justify-content: space-between;
+        line-height: 2px;
+        align-items: center;
+        width: max-content;
+        margin-bottom: 20px;
+        & .image {
+            margin-right: 20px;
+            height: 80px;
+            object-position: center;
+            border-radius: 50px;
+        }
+        & .texts {
+            height: 10%;
+        }
+    }
+    box-shadow: 0px 0px 20px #1f2c3aad;
+    & .body {
+        & .textBody {
+            font-size: 15px;
+        }
+    }
+    &:first-child {
+        grid-column: 1/ 3;
+        background-color: #7541c8;
+        background-image: url(../../../images/comas.svg);
+        background-position: 85% top;
+        background-repeat: no-repeat;
+    }
+    &:nth-child(2) {
+        background-color: #48556a;
+    }
+    &:nth-child(3) {
+        background-color: #19212e;
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    &:last-child {
+        background-color: #ffffff;
+        color: #19212e;
+        grid-column: 2 / 4;
+        grid-row: 2/3;
+    }
+}

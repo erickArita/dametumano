@@ -121,23 +121,25 @@
 	transform-style: preserve-3d;
 	transform: translateZ(2rem);
 	transition: opacity 0.3s linear;
-	text-shadow: 0 0.1rem 1rem #000;
+	text-shadow: 0 0.5rem 1rem #000;
 	opacity: 0;
-
+	$letherColor:rgb(255, 255, 255);
 	.slideSubtitle,
 	.slideTitle {
+		color: $letherColor;
 		font-size: 2rem;
 		font-weight: normal;
 		letter-spacing: 0.2ch;
 		text-transform: uppercase;
 		margin: 0;
 	}
-
+	
 	.slideSubtitle::before {
 		content: "— ";
 	}
-
+	
 	.slideDescription {
+		color: $letherColor;
 		margin: 0;
 		font-size: 0.8rem;
 		letter-spacing: 0.2ch;

@@ -1,0 +1,17 @@
+section {
+    background-color: hsl(210, 46%, 95%);
+    .title {
+        text-align: center;
+        margin: 0;
+        padding: 20px 0;
+    }
+    .gridContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-rows: repeat(2, 290px);
+        grid-gap: 20px;
+        align-content: center;
+        margin: 0 5%;
+        height: 100vh;
+    }
+}
