@@ -15,14 +15,14 @@ const Testimoniales = () => {
             image: "https://static.wixstatic.com/media/35e89d_a953238e06f141068a824aa50f89155f~mv2.jpg/v1/fill/w_460,h_460,al_c,q_80,usm_0.66_1.00_0.01/Denilson_G%C3%B3mez_edited.webp",
             nombre: "Denilson Gómez",
             titulo: "Club Dame tu Mano ha sido un aprendizaje invaluable y continuo; ",
-            texto: "me ha hecho más humano, más empático y generoso, pero sobretodo me ha ayudado a confirmar que aún existimos personas voluntarias y comprometidos con mejorar la vida de muchas otras. ",
+            texto: "Me ha hecho más humano, más empático y generoso, pero sobretodo me ha ayudado a confirmar que aún existimos personas voluntarias y comprometidos con mejorar la vida de muchas otras. ",
             contacto: "denilsongomezhn@gmail.com",
         },
         {
             image: "https://static.wixstatic.com/media/35e89d_1f2c07fe874944f9abff1db21f1707bd~mv2.jpg/v1/fill/w_460,h_460,al_c,q_80,usm_0.66_1.00_0.01/Franklin%20Aranda%20-%20Cofundador_edited.webp",
             nombre: "Franklin Aranda",
-            titulo: "Dame Tu Mano, ha sido una experiencia de crecimiento personal, me ha permitido llegar hasta el corazón de muchas personas,",
-            texto: "recuperar un poco de la humanidad que la sociedad ha ido perdiendo e incentivar a que las demás personas trabajen por una sociedad más justa y equitativa para todos.",
+            titulo: "Dame Tu Mano, ha sido una experiencia de crecimiento personal ",
+            texto: "Me ha permitido llegar hasta el corazón de muchas personas, recuperar un poco de la humanidad que la sociedad ha ido perdiendo e incentivar a que las demás personas trabajen por una sociedad más justa y equitativa para todos.",
             contacto: "franklinaranda1@gmail.com",
         },
         {
@@ -41,11 +41,12 @@ const Testimoniales = () => {
         }
     ]
     return (
-        <section>
+        <section className={tesnial.section} id="testimoniales">
             < h2 className={tesnial.title}>Testimoniales</h2>
+
             <div className={tesnial.gridContainer}>
                 {
-                    content.map((el,i) => (
+                    content.map((el, i) => (
                         <Card key={i} con={el} />
                     ))
                 }

@@ -1,5 +1,21 @@
-section {
-    background-color: hsl(210, 46%, 95%);
+@import "../../styles/responsive.mixin.scss";
+
+.section {
+    background-color: #ecf2f8;
+    box-sizing: border-box;
+    padding: 5% 0%;
+    height: max-content;
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../../images/wave.svg);
+        background-repeat: no-repeat;
+        z-index: -1;
+        width: 1600px;
+        height: 500px;
+        margin-top: -371px;
+        background-size: 100%;
+    }
     .title {
         text-align: center;
         margin: 0;
@@ -7,11 +23,18 @@ section {
     }
     .gridContainer {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        grid-template-rows: repeat(2, 290px);
+        grid-template-columns: repeat(7, minmax(18.8%, 1fr));
+        grid-template-rows: repeat(2, 45%);
         grid-gap: 20px;
         align-content: center;
-        margin: 0 5%;
-        height: 100vh;
+        margin: 3% 5%;
+        height: max-content;
+        @include respond(medium) {
+            grid-template-columns: repeat(6, minmax(10%, 1fr));
+            grid-template-rows: repeat(3, minmax(max-content, 32%));
+
+            height: 125vh;
+            height: 160vh;
+        }
     }
 }
