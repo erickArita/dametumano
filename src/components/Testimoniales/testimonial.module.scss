@@ -5,6 +5,9 @@
     box-sizing: border-box;
     padding: 5% 0%;
     height: max-content;
+    @include respond(small){
+        margin: 15% 0;
+    }
     &::before {
         content: "";
         position: absolute;
@@ -20,9 +23,15 @@
         text-align: center;
         margin: 0;
         padding: 20px 0;
+        margin:2rem 0;
     }
     .gridContainer {
         display: grid;
+        @include respond(small){
+            &{
+                margin: 6rem 0 5rem 0;
+            }
+        }
         grid-template-columns: repeat(7, minmax(18.8%, 1fr));
         grid-template-rows: repeat(2, 45%);
         grid-gap: 20px;
@@ -41,7 +50,8 @@
             grid-template-rows: repeat(4, minmax(max-content, 32%));
 
             // height: 125vh;
-            // height: 200vh;
+            // min-height: 300rem;
+            height: 200vh;
         }
     }
 }
