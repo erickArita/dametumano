@@ -3,6 +3,6 @@
       @media (max-width: 900px) { @content }
     }
     @if($breakpoint == small)  {
-      @media (max-width: 768px) { @content }
+      @media (max-width: 638px) { @content }
     }
   }

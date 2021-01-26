@@ -10,7 +10,7 @@ article {
         line-height: 2px;
         align-items: center;
         width: max-content;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         & .image {
             margin-right: 20px;
             height: 80px;
@@ -55,7 +55,6 @@ article {
         }
         &:nth-child(3) {
             grid-column: 4/7;
-            grid-row: 2/3;
         }
         &:last-child {
             grid-column: 1 /7;
@@ -63,20 +62,11 @@ article {
         }
     }
     @include respond(small) {
-        &:first-child {
+        
+        &:nth-child(n+1) {
             grid-column: 1/ 7;
-        }
-        &:nth-child(2) {
-            grid-column: 1/4;
-            grid-row: 2/3;
-        }
-        &:nth-child(3) {
-            grid-column: 4/7;
-            grid-row: 2/3;
-        }
-        &:last-child {
-            grid-column: 1 /7;
-            grid-row: 3/3;
+            grid-row: auto;
+       
         }
     }
 }

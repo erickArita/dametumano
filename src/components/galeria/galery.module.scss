@@ -1,5 +1,5 @@
 .galeria {
-    height: 100vh;
+    height: 120vh;
     width: 100%;
  
     & .title {
@@ -9,7 +9,7 @@
 
 @media only screen and(max-width:550px){
     .galeria{
-        height: 72vh;
+        height: 82vh;
     }
 }
 @media only screen and(max-width:385px){
