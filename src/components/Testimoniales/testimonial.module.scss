@@ -29,7 +29,7 @@
         display: grid;
         @include respond(small){
             &{
-                margin: 6rem 0 5rem 0;
+                margin: 6rem 1% 5rem 1%;
             }
         }
         grid-template-columns: repeat(7, minmax(18.8%, 1fr));
