@@ -1,7 +1,6 @@
 .galeria {
     height: 120vh;
     width: 100%;
- 
     & .title {
         text-align: center;
     }
@@ -9,7 +8,7 @@
 
 @media only screen and(max-width:550px){
     .galeria{
-        height: 82vh;
+        height: 72vh;
     }
 }
 @media only screen and(max-width:385px){
