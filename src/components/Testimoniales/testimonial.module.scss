@@ -5,9 +5,7 @@
     box-sizing: border-box;
     padding: 5% 0%;
     height: max-content;
-    @include respond(small){
-        margin: 15% 0;
-    }
+   
     &::before {
         content: "";
         position: absolute;
@@ -23,18 +21,19 @@
         text-align: center;
         margin: 0;
         padding: 20px 0;
-        margin:2rem 0;
+        margin: 2rem 0;
     }
     .gridContainer {
         display: grid;
-        @include respond(small){
-            &{
-                margin: 6rem 1% 5rem 1%;
+        $smallMargin:3%;
+        @include respond(small) {
+            & {
+                margin: 6rem $smallMargin 5rem $smallMargin;
             }
         }
         grid-template-columns: repeat(7, minmax(18.8%, 1fr));
         grid-template-rows: repeat(2, 45%);
-        grid-gap: 20px;
+        gap: 20px;
         align-content: center;
         margin: 3% 5%;
         height: max-content;
@@ -42,16 +41,13 @@
             grid-template-columns: repeat(6, minmax(10%, 1fr));
             grid-template-rows: repeat(3, minmax(max-content, 32%));
 
-            height: 125vh;
-            height: 160vh;
         }
         @include respond(small) {
             grid-template-columns: repeat(6, minmax(10%, 1fr));
             grid-template-rows: repeat(4, minmax(max-content, 32%));
-
+            margin: 5% $smallMargin;
             // height: 125vh;
             // min-height: 300rem;
-            height: 200vh;
         }
     }
 }

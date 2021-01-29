@@ -62,6 +62,7 @@ article {
         }
     }
     @include respond(small) {
+        height: max-content;
         
         &:nth-child(n+1) {
             grid-column: 1/ 7;
