@@ -80,7 +80,7 @@ const NavBar = () => {
                 className={`${navbar.links} ${showMenu ? navbar.movileMenu : navbar.movileMenuDisable}`}
             >
                 <Scrollspy
-                    items={["header", "nosotros", "galeria","testimoniales"]}
+                    items={["header", "nosotros", "galeria","testimoniales","contacto"]}
                     currentClassName={navbar.activeLink}
                 >
                     <Link className={navbar.link} to="/#header">

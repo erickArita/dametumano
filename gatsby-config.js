@@ -5,7 +5,7 @@ module.exports = {
     author: `@Erick-Arita`,
   },
   // flags: { PRESERVE_WEBPACK_CACHE: true },
-  pathPrefix: "/dametumano/",
+  pathPrefix: "/",
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
