@@ -57,29 +57,19 @@
 
         & .icon {
             font-size: 20px;
-
             transition: .1s ease-in;
             cursor: pointer;
-
             &:hover {
-
-                // animation:  circle 1s both;
-
                 color: $details;
-
             }
         }
 
-
         & p {
             margin: 0 5px;
-
             font-size: 1rem;
         }
 
     }
-
-
 
     & .links {
         display: flex;
