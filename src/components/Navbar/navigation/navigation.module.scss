@@ -1,0 +1,128 @@
+@import "../../layout.module.scss";
+
+.links {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    margin-right: $margin;
+
+    & ul {
+        & .link {
+            margin-right: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: $fontColor;
+            cursor: pointer;
+            padding: 5px;
+            box-sizing: border-box;
+            border-radius: 13px;
+            border-bottom: $bordeLink solid transparent;
+            border-left: $bordeLink solid transparent;
+            border-right: $bordeLink/5 solid transparent;
+            border-top: $bordeLink/5 solid transparent;
+
+            transition: 0.3s ease 0s;
+
+            &:hover {
+                border-bottom: $bordeLink solid $details;
+                border-left: $bordeLink solid $details;
+                border-right: $bordeLink/5 solid $details;
+                border-top: $bordeLink/5 solid $details;
+                // border-right: .5px solid #156cbe;
+            }
+
+            &.activeLink {
+                animation: popButton 0.8s both;
+            }
+        }
+    }
+   & .menu {
+        display: none;
+        margin-right: $margin;
+        z-index: 50;
+    }
+    
+}
+@media only screen and (max-width: 768px) {
+    .links {
+       position: absolute;
+       transition: 0.7s ease-in-out;
+       margin-right: 0;
+       background: #f12711;
+       /* fallback for old browsers */
+       background: -webkit-linear-gradient(to right, #f5af197e, #f1271167);
+       /* Chrome 10-25, Safari 5.1-6 */
+       background: linear-gradient(to right, rgb(255, 255, 255), #fffffff6);
+
+       width: 100%;
+
+       & ul {
+           height: 100vh;
+           width: inherit;
+           justify-content: center;
+           display: flex;
+           justify-content: space-evenly;
+           flex-direction: column;
+
+           & .link {
+               align-self: center;
+
+               text-decoration: none;
+               font-size: 1.1rem;
+               color: rgb(0, 0, 0);
+           }
+       }
+   }
+
+    .menu {
+       display: flex;
+       align-self: center;
+       display: unset;
+       z-index: 3;
+       color: white;
+       order: 3;
+   }
+
+   .active {
+       color: #f12711;
+       transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+   }
+
+   .movileMenuDisable {
+       -webkit-clip-path: circle(0% at 100% 0%);
+       clip-path: circle(0% at 100% 0%);
+       right: 0;
+
+       & ul {
+           padding: 0;
+       }
+   }
+
+   .movileMenu {
+       -webkit-clip-path: circle(142% at 100% 0%);
+       clip-path: circle(142% at 100% 0%);
+       right: 0;
+
+       & ul {
+           padding: 0;
+       }
+   }
+}
+@keyframes popButton {
+    0% {
+        border-bottom: $bordeLink solid $details;
+        border-left: $bordeLink solid $details;
+        border-right: $bordeLink/5 solid $details;
+        border-top: $bordeLink/5 solid $details;
+    }
+
+    100% {
+        border-radius: 5px;
+        border-bottom: $bordeLink solid $terciaryColor;
+        border-left: $bordeLink solid $terciaryColor;
+        border-right: $bordeLink/5 solid $terciaryColor;
+        border-top: $bordeLink/5 solid $terciaryColor;
+        background-color: #787dff;
+    }
+}

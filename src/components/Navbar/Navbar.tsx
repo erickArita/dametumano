@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react"
 
 import { graphql, Link, useStaticQuery } from "gatsby"
-import Scrollspy from "react-scrollspy"
 import Img from "gatsby-image"
 import { FaBars, FaFacebook, FaInstagram } from "react-icons/fa"
 import navbar from "./navbar.module.scss"
+import Navigation from "./navigation/Navigation"
 const NavBar = () => {
     const query = useStaticQuery(graphql`
     query {
@@ -28,14 +28,16 @@ const NavBar = () => {
     }
 
     useEffect(() => {
-        const updateWidth = () => {
+        const toggleMenu = () => {
             setShowMenu(false)
         }
 
-        window.addEventListener("resize", updateWidth)
+        window.addEventListener("resize", toggleMenu)
+        window.addEventListener("scroll", toggleMenu)
 
         return () => {
-            window.removeEventListener("resize", updateWidth)
+            window.removeEventListener("resize", toggleMenu)
+            window.removeEventListener("scroll", toggleMenu)
         }
     }, [])
 
@@ -53,12 +55,6 @@ const NavBar = () => {
                 </Link>
             </div>
 
-            <div
-                onClick={handleMenu}
-                className={`${navbar.menu} ${showMenu && navbar.active}`}
-            >
-                <FaBars />
-            </div>
             <div className={navbar.socialMedia}>
                 <a
                     href="https://www.facebook.com/dametumanohn/"
@@ -77,32 +73,15 @@ const NavBar = () => {
                 </a>
             </div>
             <div
-                className={`${navbar.links} ${showMenu ? navbar.movileMenu : navbar.movileMenuDisable}`}
+                onClick={handleMenu}
+                className={`${navbar.menu} ${showMenu && navbar.active}`}
             >
-                <Scrollspy
-                    items={["header", "nosotros", "galeria","testimoniales","contacto"]}
-                    currentClassName={navbar.activeLink}
-                >
-                    <Link className={navbar.link} to="/#header">
-                        INICIO
-                    </Link>
-                    <Link className={navbar.link} to="/#nosotros">
-                        NOSOTROS
-                    </Link>
-                    <Link className={navbar.link} to="/#galeria">
-                        GALERIA
-                    </Link>
-                    <Link className={navbar.link} to="/#testimoniales">
-                        TESTIMONIALES
-                    </Link>
-                    <Link className={navbar.link} to="/#contacto">
-                        CONTACTO
-                     </Link>
-                    <Link className={navbar.link} to="/#aa">
-                        DONAR
-                    </Link>
-                </Scrollspy>
+                <FaBars />
             </div>
+            <Navigation
+                showMenu={showMenu}
+                links={["INICIO", "NOSOTROS", "GALERIA", "TESTIMONIALES", "CONTACTO"]}
+            />
         </nav>
     )
 }

@@ -30,7 +30,7 @@ const Header = () => {
     },
   ]
   return (
-    <div id="header" className={header.header}>
+    <div id="inicio" className={header.header}>
       <div className={header.images}>
         <Image fluid={sources} className={header.img} />
 
