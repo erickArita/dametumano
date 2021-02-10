@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{b0ys:function(e,n,a){"use strict";a.r(n);var t=a("q1tI"),u=a.n(t);n.default=()=>u.a.createElement("div",null,"© ",(new Date).getFullYear(),", Club Dame Tu Mano")}}]);
+//# sourceMappingURL=14-f532b8a626e74b2dd90b.js.map
