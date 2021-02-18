@@ -69,11 +69,11 @@ const Slide = ({ slide, offset }) => {
           backgroundImage: `url('${slide?.image}')`,
         }}
       >
-        <div className={carou.slideContentInner}>
+        {/* <div className={carou.slideContentInner}>
           <h2 className={carou.slideTitle}>PLan Grande</h2>
           <h3 className={carou.slideSubtitle}>Visita A la escuela</h3>
           <p className={carou.slideDescription}>Ayuda  a los ninos con utiles</p>
-        </div>
+        </div> */}
       </div>
     </div>
   )
