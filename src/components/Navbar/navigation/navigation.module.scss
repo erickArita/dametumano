@@ -84,10 +84,7 @@
        order: 3;
    }
 
-   .active {
-       color: #f12711;
-       transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-   }
+  
 
    .movileMenuDisable {
        -webkit-clip-path: circle(0% at 100% 0%);

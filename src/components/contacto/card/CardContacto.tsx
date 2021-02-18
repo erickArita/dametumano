@@ -20,9 +20,8 @@ const CardContacto = ({ body, head, href }: Card) => {
                     {head}
                 </a>
             </div>
-
-            <div className={card.body}>
-                {showContent && body }
+            <div className={`${card.body} ${showContent ? card.fadeIn : card.fadeOut}`}>
+                {body}
             </div>
         </div>
     )

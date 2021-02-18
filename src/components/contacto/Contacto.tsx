@@ -2,7 +2,7 @@ import React from 'react'
 import contacto from './contacto.module.scss'
 import { FiMail } from 'react-icons/fi'
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
-import CardContacto from './CardContacto'
+import CardContacto from './card/CardContacto'
 
 const Contacto = () => {
     return (
@@ -11,8 +11,11 @@ const Contacto = () => {
             <div className={contacto.flexContainer}>
                 <CardContacto
                     head={<FiMail />}
-                    body="dametumanohn@hotmail.com"
-                    href="mailto:dametumanohn@hotmail.com"
+                    body={
+                        <a href="mailto:dametumanohn@hotmail.com">
+                            dametumanohn@hotmail.com
+                        </a>
+                    }
                 />
                 <CardContacto
                     head={<FaFacebook />}

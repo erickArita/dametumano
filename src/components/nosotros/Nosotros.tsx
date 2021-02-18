@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useEffect } from "react"
 import loadable from '@loadable/component'
 import LineSection from "./lineSection"
 const Particles = loadable(() => import('react-particles-js'))
-import nosotros from "./nosotros.module.scss"
+import Aos from 'aos'
+ import nosotros from "./nosotros.module.scss"
 const Nosotros = () => {
+  
     const data = [
         {
             year: 2018,
@@ -21,9 +23,11 @@ const Nosotros = () => {
                 "En la actualidad representamos la primera organización independiente de jovenes voluntarios formada en Santa Rita de Copán Honduras.",
         },
     ]
-
+useEffect(() => {
+    Aos.init();
+}, [])
     return (
-        <div id="nosotros" className={nosotros.nosotros}>
+        <section id="nosotros" className={nosotros.nosotros}>
             <Particles
                 className={nosotros.background}
                 params={{
@@ -72,16 +76,16 @@ const Nosotros = () => {
                 }}
             />
 
-            <h2 className={nosotros.title}>Nosotros</h2>
-            <div className={nosotros.nosotrosContent}>
+            <h2   className={nosotros.title}>Nosotros</h2>
+            <div  className={nosotros.nosotrosContent}>
                 <div className={nosotros.lineContainer}>
-                    {data.map(({ year, content }) => (
+                    {data.map(({ year, content },i) => (
                         // console.log(year,content)
-                        <LineSection key={year} year={year} content={content} />
+                        <LineSection key={year} year={year} iterator={i} content={content} />
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

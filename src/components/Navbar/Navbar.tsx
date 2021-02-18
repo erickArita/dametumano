@@ -80,7 +80,7 @@ const NavBar = () => {
             </div>
             <Navigation
                 showMenu={showMenu}
-                links={["INICIO", "NOSOTROS", "GALERIA", "TESTIMONIALES", "CONTACTO"]}
+                links={["INICIO", "NOSOTROS", "GALERIA", "TESTIMONIALES","VALORES" ,"CONTACTO"]}
             />
         </nav>
     )

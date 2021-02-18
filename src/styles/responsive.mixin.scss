@@ -8,4 +8,7 @@
     @if($breakpoint == short)  {
       @media (max-width: 538px) { @content }
     }
+    @if($breakpoint == PC)  {
+      @media (max-width: 1200px) { @content }
+    }
   }

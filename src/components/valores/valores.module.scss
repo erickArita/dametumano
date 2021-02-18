@@ -1,0 +1,99 @@
+@import "../../styles/responsive.mixin.scss";
+.section {
+    background: linear-gradient(to bottom, rgb(255, 255, 255));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../../images/wave.svg);
+        background-repeat: no-repeat;
+        z-index: 0;
+        width: 100%;
+        height: 500px;
+        margin-top: -258px;
+        background-size: 1200px;
+        transform: rotate(180deg);
+    }
+    .title {
+        text-align: center;
+        z-index: 3;
+        margin-top: 2%;
+    }
+
+    .shapes {
+        display: flex;
+        width: 700px;
+        height: 700px;
+        min-width: 300px;
+        min-height: 300px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        line-height: 40px;
+        align-items: center;
+        justify-self: center;
+        .circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 600;
+            $circle: 250px;
+            border-radius: 50%;
+            background-color: rgba(62, 133, 175, 0.788);
+            width: $circle;
+            height: $circle;
+            &:first-child {
+                animation: left-c 3s infinite alternate;
+                background-color: rgba(230, 87, 62, 0.788);
+            }
+            &:nth-child(2) {
+                animation: rigth-c 3s infinite alternate;
+                background-color: rgba(79, 194, 214, 0.788);
+            }
+            &:last-child {
+                animation: bottom-c 3s infinite alternate;
+                background-color: rgba(56, 155, 212, 0.788);
+            }
+        }
+
+        @include respond(short) {
+            width: 100%;
+            height: 70%;
+            & .circle {
+                width: 45vw;
+                height: 40%;
+            }
+        }
+    }
+}
+$x: 56px;
+$y: 70px;
+
+@keyframes left-c {
+    from {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        transform: translate3d($x, $y, 0px);
+    }
+}
+@keyframes rigth-c {
+    from {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        transform: translate3d(-$x, $y, 0px);
+    }
+}
+@keyframes bottom-c {
+    from {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        transform: translate3d(0px, -60px, 0px);
+    }
+}

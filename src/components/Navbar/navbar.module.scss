@@ -3,7 +3,7 @@
 .navbar {
     top: 0px;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     display: flex;
     background: $primaryColor;
     /* fallback for old browsers */
@@ -37,12 +37,6 @@
         margin-left: $margin;
     }
 
-    & .menu {
-        display: none;
-        margin-right: $margin;
-        z-index: 50;
-    }
-
     & .socialMedia {
         display: flex;
         align-items: center;
@@ -61,6 +55,16 @@
             margin: 0 5px;
             font-size: 1rem;
         }
+    }
+    & .menu {
+        display: none;
+        margin-right: $margin;
+        z-index: 50;
+        color: white;
+    }
+    & .active {
+        color: #000000;
+        transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 }
 
@@ -128,7 +132,6 @@
             align-self: center;
             display: unset;
             z-index: 3;
-            color: white;
             order: 3;
         }
     }

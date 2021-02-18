@@ -18,7 +18,7 @@ const Navigation = ({ showMenu, links }: links) => {
                 currentClassName={navigation.activeLink}>
                 {
                     links.map((link) =>
-                        <Link className={navigation.link} to={`/#${link.toLowerCase()}`}>
+                        <Link key={link} className={navigation.link} to={`/#${link.toLowerCase()}`}>
                             {link}
                         </Link>
                     )

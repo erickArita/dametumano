@@ -1,6 +1,7 @@
 @import "../../../styles/responsive.mixin.scss";
 
-article {
+.container {
+  
     border-radius: 10px;
     color: #ffffff;
     padding: 20px;
@@ -16,9 +17,17 @@ article {
             height: 80px;
             object-position: center;
             border-radius: 50px;
+            @include respond(medium) {
+                margin-right: 10px;
+            }
         }
         & .texts {
-            height: 10%;
+            // height: 10%;
+            @include respond(medium) {
+                .contacto{
+                    font-size: 12px;
+                }
+            }
         }
     }
     box-shadow: 0px 0px 20px #1f2c3aad;
