@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import tesnial from './testimonial.module.scss'
-
+import Aos from 'aos'
 import Card from './Card/Card'
 export interface DataFounder {
     image: string,
@@ -11,6 +11,10 @@ export interface DataFounder {
     animation: string
 }
 const Testimoniales = () => {
+    useEffect(() => {
+        Aos.init()
+        
+    }, [])  
     const content: Array<DataFounder> = [
         {
             image: "https://static.wixstatic.com/media/35e89d_a953238e06f141068a824aa50f89155f~mv2.jpg/v1/fill/w_460,h_460,al_c,q_80,usm_0.66_1.00_0.01/Denilson_G%C3%B3mez_edited.webp",
