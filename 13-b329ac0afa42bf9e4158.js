@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{A5mV:function(e,n,t){e.exports={container:"footer-module--container--2NQrP"}},b0ys:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),o=t.n(a),r=t("A5mV"),c=t.n(r);n.default=()=>o.a.createElement("footer",{className:c.a.container},o.a.createElement("p",null,"CopyRight © ",(new Date).getFullYear(),", Club Dame Tu Mano"))}}]);
+//# sourceMappingURL=13-b329ac0afa42bf9e4158.js.map
