@@ -14,7 +14,7 @@ const Navigation = ({ showMenu, links }: links) => {
                  ${showMenu ? navigation.movileMenu : navigation.movileMenuDisable}`}
         >
             <Scrollspy
-                items={["inicio", "nosotros", "galeria", "testimoniales", "contacto"]}
+                items={[...links.map(e=>e.toLowerCase())]}
                 currentClassName={navigation.activeLink}>
                 {
                     links.map((link) =>
