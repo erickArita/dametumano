@@ -3,7 +3,7 @@ import card from './card.module.scss'
 const Card = ({ con,i }) => {
     return (
         
-        <article data-aos={con.animation} className={card.container}>
+        <article data-aos={con.animation} data-aos-anchor-placement="center-bottom" className={card.container}>
             <div className={card.header}>
                 <img src={con.image} className={card.image} />
                 <div className={card.texts}>
